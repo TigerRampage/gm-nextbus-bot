@@ -2,8 +2,12 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
-	<classpathentry kind="lib" path="C:/Users/Dylan/Downloads/retrofit-2.1.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Dylan/Downloads/converter-gson-2.0.0-beta3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Dylan/Downloads/converter-simplexml-2.0.0-beta3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Dylan/Downloads/converter-gson-2.0.0-beta2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Dylan/Downloads/converter-simplexml-2.0.0-beta2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Dylan/Downloads/retrofit-2.0.0-beta2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Dylan/Downloads/gson-2.8.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Dylan/Downloads/okio-1.11.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Dylan/Downloads/okhttp-2.7.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Dylan/Downloads/simple-xml-2.6.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

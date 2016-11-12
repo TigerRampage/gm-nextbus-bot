@@ -1,15 +1,25 @@
 package nextbus;
 
+import org.simpleframework.xml.Attribute;
+import org.simpleframework.xml.Element;
+import org.simpleframework.xml.Root;
+
+@Root
 public class Direction
 {
+	@Element
     private Stop[] stop;
-
+	
+	@Attribute
     private String title;
-
+	
+	@Attribute
     private String useForUI;
-
+	
+	@Attribute
     private String tag;
-
+	
+	@Attribute
     private String name;
 
     public Stop[] getStop ()

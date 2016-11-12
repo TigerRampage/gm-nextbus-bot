@@ -1,27 +1,43 @@
 package nextbus;
 
+import org.simpleframework.xml.Attribute;
+import org.simpleframework.xml.Element;
+import org.simpleframework.xml.Root;
+
+@Root
 public class Route
 {
+	@Attribute
     private String latMax;
 
+	@Element
     private Stop[] stop;
 
+    @Attribute
     private String title;
 
+    @Attribute
     private String lonMin;
 
+    @Attribute
     private String color;
 
+    @Attribute
     private String tag;
-
+    
+    @Element
     private Direction direction;
 
+    @Element
     private Path[] path;
 
+    @Attribute
     private String oppositeColor;
 
+    @Attribute
     private String lonMax;
 
+    @Attribute
     private String latMin;
 
     public String getLatMax ()

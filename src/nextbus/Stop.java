@@ -1,15 +1,28 @@
 package nextbus;
 
+import org.simpleframework.xml.Attribute;
+import org.simpleframework.xml.Element;
+import org.simpleframework.xml.Root;
+
+@Root(strict=false)
 public class Stop
 {
+	@Attribute(required=false)
     private String title;
+	
+	@Attribute(required=false)
+	private String shortTitle;
 
+	@Attribute(required=false)
     private String lon;
 
+	@Attribute
     private String tag;
 
+	@Attribute(required=false)
     private String stopId;
 
+	@Attribute(required=false)
     private String lat;
 
     public String getTitle ()
@@ -17,7 +30,15 @@ public class Stop
         return title;
     }
 
-    public void setTitle (String title)
+    public String getShortTitle() {
+		return shortTitle;
+	}
+
+	public void setShortTitle(String shortTitle) {
+		this.shortTitle = shortTitle;
+	}
+
+	public void setTitle (String title)
     {
         this.title = title;
     }

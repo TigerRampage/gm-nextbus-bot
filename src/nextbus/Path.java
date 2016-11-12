@@ -1,7 +1,10 @@
 package nextbus;
 
+import org.simpleframework.xml.Attribute;
+import org.simpleframework.xml.Element;
 public class Path
 {
+	@Element
     private Point[] point;
 
     public Point[] getPoint ()

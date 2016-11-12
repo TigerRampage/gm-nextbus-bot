@@ -1,27 +1,33 @@
 package nextbus;
 
+import org.simpleframework.xml.Attribute;
+import org.simpleframework.xml.Root;
+
+@Root
 public class Point
 {
-    private String lon;
+	@Attribute
+    private double lon;
 
-    private String lat;
+	@Attribute
+    private double lat;
 
-    public String getLon ()
+    public double getLon ()
     {
         return lon;
     }
 
-    public void setLon (String lon)
+    public void setLon (double lon)
     {
         this.lon = lon;
     }
 
-    public String getLat ()
+    public double getLat ()
     {
         return lat;
     }
 
-    public void setLat (String lat)
+    public void setLat (double lat)
     {
         this.lat = lat;
     }
