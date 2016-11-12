@@ -12,6 +12,9 @@ public class Point
 	@Attribute
     private double lat;
 
+	public Point() {
+		
+	}
     public double getLon ()
     {
         return lon;

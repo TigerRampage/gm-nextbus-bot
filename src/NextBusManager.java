@@ -1,5 +1,10 @@
-import nextbus.Body;
+import java.io.IOException;
+
+import com.squareup.okhttp.ResponseBody;
+
 import nextbus.NextBusInterfaceEnpoint;
+import nextbus.Route;
+import nextbus.RoutesBody;
 import retrofit.Callback;
 import retrofit.Response;
 import retrofit.Retrofit;
@@ -17,23 +22,42 @@ public class NextBusManager {
 	}
 
 	public void getRoutes() {
-		service.getRouteConfig().enqueue(new Callback<Body>() {
+		service.getRouteConfig().enqueue(new Callback<RoutesBody>() {
 			
 			@Override
-			public void onFailure(Throwable error) {
-				// TODO Auto-generated method stub
-				System.out.println(error.getMessage());
+			public void onResponse(Response<RoutesBody> arg0, Retrofit arg1) {
+				RoutesBody body = arg0.body();
+				Route route = body.getRoute();
 				
+				System.out.println(route);
 			}
-
+			
 			@Override
-			public void onResponse(Response<Body> response, Retrofit arg1) {
-				// TODO Auto-generated method stub
+			public void onFailure(Throwable arg0) {
+				System.out.println(arg0.getMessage());
 				
-				System.out.println(response.body().getRoute());
 			}
 		});
-
+		
+		/*service.getRouteConfigRaw().enqueue(new Callback<ResponseBody>() {
+			
+			@Override
+			public void onResponse(Response<ResponseBody> arg0, Retrofit arg1) {
+				try {
+					System.out.println(arg0.body().string());
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+			}
+			
+			@Override
+			public void onFailure(Throwable arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+		});*/
 	}
 
 	public static void main(String[] args) {

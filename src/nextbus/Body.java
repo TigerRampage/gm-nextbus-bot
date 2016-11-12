@@ -1,41 +1,35 @@
 package nextbus;
 
-import org.simpleframework.xml.Attribute;
-import org.simpleframework.xml.Element;
+import java.util.List;
+
+import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
 
-@Root
+@Root(name="body", strict=false)
 public class Body
 {
-	@Element
-    private Route route;
+	@ElementList(inline=true)
+    private List<Agency> agencies;
 
-    @Attribute
-    private String copyright;
 
-    public Route getRoute ()
+    public Body() {
+    	
+    }
+    public List<Agency> getAgencies()
     {
-        return route;
+        return agencies;
     }
 
-    public void setRoute (Route route)
+    public void setAgencies(List<Agency> agencies)
     {
-        this.route = route;
+        this.agencies = agencies;
     }
 
-    public String getCopyright ()
-    {
-        return copyright;
-    }
 
-    public void setCopyright (String copyright)
-    {
-        this.copyright = copyright;
-    }
 
     @Override
     public String toString()
     {
-        return "ClassPojo [route = "+route+", copyright = "+copyright+"]";
+        return agencies.toString();
     }
 }

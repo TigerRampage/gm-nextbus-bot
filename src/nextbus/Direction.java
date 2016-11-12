@@ -1,80 +1,74 @@
 package nextbus;
 
+import java.util.List;
+
 import org.simpleframework.xml.Attribute;
-import org.simpleframework.xml.Element;
+import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
 
 @Root
-public class Direction
-{
-	@Element
-    private Stop[] stop;
-	
+public class Direction {
+	@ElementList(inline = true)
+	private List<Stop> stops;
+
 	@Attribute
-    private String title;
-	
+	private String title;
+
 	@Attribute
-    private String useForUI;
-	
+	private String useForUI;
+
 	@Attribute
-    private String tag;
-	
+	private String tag;
+
 	@Attribute
-    private String name;
+	private String name;
 
-    public Stop[] getStop ()
-    {
-        return stop;
-    }
+	public Direction() {
 
-    public void setStop (Stop[] stop)
-    {
-        this.stop = stop;
-    }
+	}
 
-    public String getTitle ()
-    {
-        return title;
-    }
+	public List<Stop> getStops() {
+		return stops;
+	}
 
-    public void setTitle (String title)
-    {
-        this.title = title;
-    }
+	public void setStops(List<Stop> stops) {
+		this.stops = stops;
+	}
 
-    public String getUseForUI ()
-    {
-        return useForUI;
-    }
+	public String getTitle() {
+		return title;
+	}
 
-    public void setUseForUI (String useForUI)
-    {
-        this.useForUI = useForUI;
-    }
+	public void setTitle(String title) {
+		this.title = title;
+	}
 
-    public String getTag ()
-    {
-        return tag;
-    }
+	public String getUseForUI() {
+		return useForUI;
+	}
 
-    public void setTag (String tag)
-    {
-        this.tag = tag;
-    }
+	public void setUseForUI(String useForUI) {
+		this.useForUI = useForUI;
+	}
 
-    public String getName ()
-    {
-        return name;
-    }
+	public String getTag() {
+		return tag;
+	}
 
-    public void setName (String name)
-    {
-        this.name = name;
-    }
+	public void setTag(String tag) {
+		this.tag = tag;
+	}
 
-    @Override
-    public String toString()
-    {
-        return "ClassPojo [stop = "+stop+", title = "+title+", useForUI = "+useForUI+", tag = "+tag+", name = "+name+"]";
-    }
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return "";
+	}
 }

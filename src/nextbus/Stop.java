@@ -4,33 +4,35 @@ import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.Root;
 
-@Root(strict=false)
-public class Stop
-{
-	@Attribute(required=false)
-    private String title;
-	
-	@Attribute(required=false)
+@Element(data = true)
+public class Stop {
+	@Attribute(required = false)
+	private String title;
+
+	@Attribute(required = false)
 	private String shortTitle;
 
-	@Attribute(required=false)
-    private String lon;
+	@Attribute(required = false)
+	private String lon;
 
 	@Attribute
-    private String tag;
+	private String tag;
 
-	@Attribute(required=false)
-    private String stopId;
+	@Attribute(required = false)
+	private String stopId;
 
-	@Attribute(required=false)
-    private String lat;
+	@Attribute(required = false)
+	private String lat;
 
-    public String getTitle ()
-    {
-        return title;
-    }
+	public Stop() {
 
-    public String getShortTitle() {
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public String getShortTitle() {
 		return shortTitle;
 	}
 
@@ -38,54 +40,45 @@ public class Stop
 		this.shortTitle = shortTitle;
 	}
 
-	public void setTitle (String title)
-    {
-        this.title = title;
-    }
+	public void setTitle(String title) {
+		this.title = title;
+	}
 
-    public String getLon ()
-    {
-        return lon;
-    }
+	public String getLon() {
+		return lon;
+	}
 
-    public void setLon (String lon)
-    {
-        this.lon = lon;
-    }
+	public void setLon(String lon) {
+		this.lon = lon;
+	}
 
-    public String getTag ()
-    {
-        return tag;
-    }
+	public String getTag() {
+		return tag;
+	}
 
-    public void setTag (String tag)
-    {
-        this.tag = tag;
-    }
+	public void setTag(String tag) {
+		this.tag = tag;
+	}
 
-    public String getStopId ()
-    {
-        return stopId;
-    }
+	public String getStopId() {
+		return stopId;
+	}
 
-    public void setStopId (String stopId)
-    {
-        this.stopId = stopId;
-    }
+	public void setStopId(String stopId) {
+		this.stopId = stopId;
+	}
 
-    public String getLat ()
-    {
-        return lat;
-    }
+	public String getLat() {
+		return lat;
+	}
 
-    public void setLat (String lat)
-    {
-        this.lat = lat;
-    }
+	public void setLat(String lat) {
+		this.lat = lat;
+	}
 
-    @Override
-    public String toString()
-    {
-        return "ClassPojo [title = "+title+", lon = "+lon+", tag = "+tag+", stopId = "+stopId+", lat = "+lat+"]";
-    }
+	@Override
+	public String toString() {
+		return "ClassPojo [title = " + title + ", lon = " + lon + ", tag = " + tag + ", stopId = " + stopId + ", lat = "
+				+ lat + "]";
+	}
 }
